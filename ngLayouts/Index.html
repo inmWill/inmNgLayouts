@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en" ng-app="devEtlApp">
+<head>
+    <meta charset="utf-8">
+    <title>ConSova DEV Client DataLoads</title>
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <!--<link href="Content/ripples.css" rel="stylesheet">
+    <link href="Content/material.css" rel="stylesheet">-->
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/app.css">
+
+    <script type="text/javascript" src="Vendor/Scripts/angular.js"></script>
+    <script type="text/javascript" src="vendor/scripts/angular-route.js"></script>
+    <script type="text/javascript" src="vendor/scripts/angular-animate.js"></script>
+    <script type="text/javascript" src="App/app.js"></script>
+    <script src="App/Client/clientCtrl.js"></script>
+    <script src="App/Audit/auditCtrl.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/home"><img src="Images/consLogo.png" alt="" /></a>
+        </div>
+    </div>
+    <div class="container">    
+        <div class="top-buffer">
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+</html>
+
