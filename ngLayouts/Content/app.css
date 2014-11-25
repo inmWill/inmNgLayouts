@@ -54,24 +54,53 @@
     margin-top: 20px;
 }
 
-.bs-callout-warning {
-border-left-color: #f0ad4e;
-}
-
-.bs-callout-danger {
-border-left-color: #d9534f;
-}
-
-.bs-callout-info {
-border-left-color: #5bc0de;
-}
-
-.bs-callout {
+.callout {
 padding: 20px;
 margin: 20px 0;
 border: 1px solid #eee;
 border-left-width: 5px;
 border-radius: 3px;
+}
+
+.callout h4 {
+margin-top: 0;
+margin-bottom: 5px;
+}
+
+.callout-warning {
+border-left-color: #f0ad4e;
+}
+
+.callout-danger {
+border-left-color: #d9534f;
+}
+
+.callout-info {
+border-left-color: #5bc0de;
+}
+
+.callout-warning h4 {
+color: #f0ad4e;
+}
+
+.callout-danger h4 {
+color: #d9534f;
+}
+
+.callout-info h4 {
+color: #5bc0de;
+}
+
+.text-warning {
+color: #f0ad4e;
+}
+
+.text-danger {
+color: #d9534f;
+}
+
+.text-info {
+color: #5bc0de;
 }
 
 /*  ng-hide Animation  */
@@ -87,4 +116,21 @@ border-radius: 3px;
 
 .animate-show.ng-hide {
   opacity: 0;
+}
+
+.slidemenu{
+    position: fixed;               
+    top: 50px;
+    left: -125px;
+    width: 150px;
+    -webkit-transition: all 500ms ;
+    -moz-transition: all 500ms ;
+    -ms-transition: all 500ms ;
+    -o-transition: all 500ms ;
+    transition: all 500ms ;
+}
+
+.slidemenu.open{
+  left:0;
+  
 }

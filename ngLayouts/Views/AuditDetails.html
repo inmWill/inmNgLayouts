@@ -2,7 +2,22 @@
     <div class="col-md-11 col-md-offset-1"><h1>Data Load Options</h1></div>
 </div>
 <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-2">
+        <div class="slidemenu" ng-class="{'open' : menuOpen}" ng-mouseenter="menuOpen = true"
+             ng-mouseleave="menuOpen = false">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Cras justo odio
+                </a>
+                <a href="#/clientauditselect" class="list-group-item">Client</a>
+                <a href="#/settings" class="list-group-item">Settings</a>
+                <a href="#" class="list-group-item">Audit</a>
+                <a href="#" class="list-group-item">Load Data</a>
+            </div>
+                  
+        </div>
+    </div>
+    <div class="col-md-10">
         <form class="form-horizontal" ng-controller="auditCtrl as vm">
             <fieldset>
                 <legend>General</legend>

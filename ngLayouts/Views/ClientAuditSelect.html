@@ -1,0 +1,57 @@
+﻿<div class="container" ng-controller="clientCtrl as vm">
+    <div class="row top-buffer">
+        <div class="col-md-12 text-center">
+            <h3 ng-show="vm.activeClient.name == 'Hain Celestial'"><strong><i class="text-danger fa fa-times-circle-o fa-4x" style="vertical-align: middle; "></i> <span></span>ConSova Client Data Load ETL System</strong></h3>
+            <h3 ng-show="vm.activeClient == null"><strong><i class="text-info fa fa-arrow-circle-o-right fa-4x" style="vertical-align: middle; "></i> <span></span>ConSova Client Data Load ETL System</strong></h3>
+            <h3 ng-show="vm.activeClient.name == 'SLVHA'"><strong><i class="text-warning fa fa fa-exclamation-circle fa-4x" style="vertical-align: middle; "></i> <span></span>ConSova Client Data Load ETL System</strong></h3>
+            <h3 ng-show="vm.activeClient.name == 'On The Border'"><strong><i class="text-success fa fa-check-circle-o fa-4x" style="vertical-align: middle; "></i> <span></span>ConSova Client Data Load ETL System</strong></h3>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-3 col-md-offset-1">
+            <h4>Select Client</h4>
+            <div class="input-group">
+                <select class="form-control" ng-model="vm.activeClient" ng-options="client.name for client in vm.clients">
+                    <option value="">-- Select Client --</option>
+                </select>
+                <span class="input-group-btn"><a href="#/settings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+            </div>
+            <h4>Select Audit</h4>
+            <div class="input-group">
+                <select class="form-control" ng-model="vm.activeAudit" ng-options="audit.name for audit in vm.audits">
+                    <option value="">-- Select Audit --</option>
+                </select>
+                <span class="input-group-btn"><a href="#/audit" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+            </div>
+            <h4>Select Profile</h4>
+            <div class="input-group">
+                <select class="form-control" ng-model="vm.activeProfile" ng-options="profile.name for profile in vm.profiles">
+                    <option value="">-- Select Import Profile --</option>
+                </select>
+                <span class="input-group-btn"><a href="#/etlsettings" class="btn btn-default"><i class="fa fa-cog"></i></a></span>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div ng-show="vm.activeClient.name == 'SLVHA'" class="callout callout-warning animate-show">
+                <h4>Client setup required!</h4>
+                <p>You will need a client map to get started. <a href="#/settings">Setup client now.</a></p>
+            </div>
+            <div ng-show="vm.activeAudit.name == 'Working Spouse Surcharge'" class="callout callout-danger animate-show">
+                <h4>Problem detected!</h4>
+                <p>There was a problem loading the data. <a href="#/audit">Check audit.</a></p>
+            </div>
+            <div ng-show="vm.activeProfile.name == 'Carve Out'" class="callout callout-info animate-show">
+                <h4>Data Load complete!</h4>
+                <p>The dataload was completed successfully on 11/24/2014. <a href="#/audit">View Counts.</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-3 col-md-offset-1">
+            
+        </div>
+        <div class="col-md-8">
+            <a href="#/batch" class="btn btn-primary btn-raised">Load Client Data <i class="fa fa-play"></i></a>
+        </div>
+    </div>
+</div>

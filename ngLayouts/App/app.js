@@ -20,6 +20,10 @@
                     templateUrl: 'Views/ETLDetails.html'
                     //     controller: 'AuditCtrl'
                 }).
+                when('/clientauditselect', {
+                    templateUrl: 'Views/ClientAuditSelect.html'
+                    //     controller: 'AuditCtrl'
+                }).
                 when('/home', {
                     templateUrl: 'Views/Home.html'
                     //     controller: 'AuditCtrl'
